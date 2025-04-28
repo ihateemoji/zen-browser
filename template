@@ -1,22 +1,26 @@
 # Template file for 'zen-browser'
 pkgname=zen-browser
-version=1.7b
+version=1.11.5b
 revision=1
 only_for_archs="x86_64"
 wrksrc="${pkgname}-${version}"
 build_style=meta
 hostmakedepends="tar bzip2"
 short_desc="Minimalistic web browser"
-maintainer="SalahDin Rezk <salah2112004@gmail.com>"
 license="MPL-2.0"
 homepage="https://www.zen-browser.app/"
-distfiles="https://github.com/zen-browser/desktop/releases/download/${version/a/-a}/zen.linux-x86_64.tar.bz2"
-checksum=b7276efa47358d8eec2e06a6e4adc324f29c1b10e7e80653fd4724e0f7717fef
+distfiles="https://github.com/zen-browser/desktop/releases/download/${version/a/-a}/zen.linux-x86_64.tar.xz"
+checksum=9840082fded87c9d47d8e6497ba5665594eb6492a06f7fe45a68c5e591d4e647
 
 do_install() {
 		# Install the files
 		vmkdir usr/lib/zen-browser
 		vcopy * usr/lib/zen-browser
+        for i in 16x16 32x32 48x48 128x128; do
+            vinstall ${wrksrc}/browser/chrome/icons/default/default${i%x*}.png 644 \
+                usr/share/icons/hicolor/${i}/apps zen.png
+        done
+        vinstall "${FILESDIR}/zen.desktop" 644 usr/share/applications
 
 		# link the binary
 		vmkdir usr/bin/
