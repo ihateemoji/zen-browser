@@ -46,23 +46,6 @@ To install the Zen Browser package:
    vpsm install zen-browser
    ```
 
-### Prerequisites
-
-To use the update script, you need:
-
-- vpsm
-- xbps-src
-- curl
-- sed
-- sh
-
-You must also set the `XBPS_DISTDIR` environment variable to point to your Void Packages directory.
-
-Example:
-```sh
-export XBPS_DISTDIR="$HOME/.void-packages"
-```
-
 ## Contributing
 
 If you want to contribute to this package, please make sure to test your changes thoroughly before submitting a pull request.
