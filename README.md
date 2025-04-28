@@ -5,7 +5,6 @@ This repository contains files for packaging Zen Browser for Void Linux using th
 ## Files
 
 1. `template`: XBPS template file for Zen Browser
-2. `files/update-template.sh`: Script to update the Zen Browser XBPS template
 
 ## Template File
 
@@ -13,7 +12,6 @@ The `template` file is an XBPS template for Zen Browser.
 
 - Architecture: x86_64 only
 - Build style: precompiled binaries
-- Maintainer: SalahDin Rezk <salah2112004@gmail.com>
 
 The template file handles the installation of precompiled binaries and sets up the necessary dependencies.
 
@@ -23,7 +21,7 @@ To install the Zen Browser package:
 
 1. Clone the Void Packages repository:
    ```sh
-   git clone https://github.com/salastro/zen-browser.git
+   git clone https://github.com/ihateemoji/zen-browser.git
    ```
 2. Copy the directory to the `srcpkgs/zen-browser` directory in your Void Packages repository:
    ```sh
@@ -48,15 +46,6 @@ To install the Zen Browser package:
    vpsm install zen-browser
    ```
 
-## Update Script
-
-The `update-template.sh` script automates the process of updating the Zen Browser XBPS template. It performs the following tasks:
-
-1. Fetches the latest release version from the Zen Browser GitHub repository
-2. Updates the version in the template file
-3. Updates the checksums
-4. Installs the updated Zen Browser package
-
 ### Prerequisites
 
 To use the update script, you need:
@@ -73,17 +62,6 @@ Example:
 ```sh
 export XBPS_DISTDIR="$HOME/.void-packages"
 ```
-
-### Usage
-
-To update the Zen Browser package:
-
-1. Ensure you have met all prerequisites
-2. Run the update script:
-   ```sh
-   chmod +x files/update-template.sh
-   ./files/update-template.sh
-   ```
 
 ## Contributing
 
