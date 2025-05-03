@@ -1,6 +1,6 @@
 # Template file for 'zen-browser'
 pkgname=zen-browser
-version=1.11.5b
+version=1.12b
 revision=1
 only_for_archs="x86_64"
 wrksrc="${pkgname}-${version}"
@@ -10,7 +10,7 @@ short_desc="Minimalistic web browser"
 license="MPL-2.0"
 homepage="https://www.zen-browser.app/"
 distfiles="https://github.com/zen-browser/desktop/releases/download/${version/a/-a}/zen.linux-x86_64.tar.xz"
-checksum=9840082fded87c9d47d8e6497ba5665594eb6492a06f7fe45a68c5e591d4e647
+checksum=76aa9feee9fae5a0de916ec99170d944bfb254303907f499eb3dee38bcc45eef
 
 do_install() {
     # Install the files
